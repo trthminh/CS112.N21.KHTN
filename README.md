@@ -2,7 +2,7 @@
 ## Group 6:
 | Member|Student ID|
 |-----------|-----------|
-|Truong Thanh Minh|21520064|
-|Le Chau Anh|21521821|
+|Trương Thanh Minh|21520064|
+|Lê Châu Anh|21521821|
 
 
