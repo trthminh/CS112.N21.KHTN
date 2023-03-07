@@ -13,5 +13,9 @@
 - **Teacher**: MSc. Nguyen Thanh Sơn
 - **Course length**: 15 weeks
 
+## This repository:
+- The `Assignment` folder contains all the assignments and reports for each week.
+- The `Presentation` folder contains all of the resources that our group used in the presentation.
+
 ## Contact:
 If you have any question, feel free to open issues or contact us at the email address above.
