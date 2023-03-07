@@ -8,7 +8,7 @@
 ## Course information:
 - **University**: University of Information Technology - VNUHCM UIT.
 - **Faculty**: Computer Science
-- **Semester**: 1
+- **Semester**: 2
 - **Year**: 2022 - 2023
 - **Teacher**: MSc. Nguyen Thanh Sơn
 - **Course length**: 15 weeks
