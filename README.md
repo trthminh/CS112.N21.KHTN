@@ -19,3 +19,9 @@
 
 ## Contact:
 If you have any question, feel free to open issues or contact us at the email address above.
+
+## About content:
+- This repo presents about **Geometric Algorithms 3D**.
+- In there,  we will covers some content:
+  - 1. Points
+  - 2. Vectors
