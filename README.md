@@ -10,7 +10,7 @@
 - **Faculty**: Computer Science
 - **Semester**: 1
 - **Year**: 2022 - 2023
-- **Teacher**: Msc. Nguyen Thanh Sơn
+- **Teacher**: MSc. Nguyen Thanh Sơn
 - **Course length**: 15 weeks
 
 ## Contact:
