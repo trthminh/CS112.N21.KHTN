@@ -3,7 +3,7 @@
 | **Member**|**Student ID**|**Email**|
 |-----------|-----------|-----------|
 |Truong Thanh Minh|21520064|21520064@gm.uit.edu.vn|
-|Le Chau Anh|21521821|21521821@gmail.uit.edu.vn|
+|Le Chau Anh|21521821|21521821@gm.uit.edu.vn|
 
 ## Course information:
 - **University**: University of Information Technology - VNUHCM UIT.
