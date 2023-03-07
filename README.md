@@ -17,8 +17,7 @@
 - The `Assignment` folder contains all the assignments and reports for each week.
 - The `Presentation` folder contains all of the resources that our group used in the presentation.
 ### About `Assignment` folder:
-- In there, I will show all of the assignments for each week. Specifically:
-  - Week 1: Merge Sort using Parallel
+- Week 1: Merge Sort using Parallel
 
 ## Contact:
 If you have any question, feel free to open issues or contact us at the email address above.
