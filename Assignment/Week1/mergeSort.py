@@ -1,31 +1,24 @@
-# Python Program to implement merge sort using
-# multi-threading
 import threading
 import time
 import random
 
-# number of elements in array
+# len of array
 MAX = 100000
 
-# number of threads
 THREAD_MAX = 4
 
 a = [0] * MAX
 
-# merge function for merging two parts
 def merge(l, r):
 	mid = l + (r - l) // 2
 	left = a[l:mid+1]
 	right = a[mid+1:r+1]
 
-	# n1 is size of left part and n2 is size
-	# of right part
 	nL = len(left)
 	nR = len(right)
 	i = j = 0
 	k = l
 
-	# merge left and right in ascending order
 	while i < nL and j < nR:
 		if left[i] <= right[j]:
 			a[k] = left[i]
@@ -47,13 +40,11 @@ def merge(l, r):
 
 def merge_sort(l, r):
 	if l < r:
-		# calculating mid point of array
 		mid = l + (r - l) // 2
 
 		merge_sort(l, mid)
 		merge_sort(mid + 1, r)
 
-		# merging the two halves
 		merge(l, r)
 
 def merge_sort_threaded():
