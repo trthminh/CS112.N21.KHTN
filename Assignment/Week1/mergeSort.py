@@ -1,25 +1,32 @@
+# Python Program to implement merge sort using
+# multi-threading
 import threading
 import time
 import random
 
-MAX = 20
+# number of elements in array
+MAX = 100000
 
+# number of threads
 THREAD_MAX = 4
 
 a = [0] * MAX
-part = 0
 
-def merge(low, mid, high):
-	left = a[low:mid+1]
-	right = a[mid+1:high+1]
+# merge function for merging two parts
+def merge(l, r):
+	mid = l + (r - l) // 2
+	left = a[l:mid+1]
+	right = a[mid+1:r+1]
 
-	# n1 is size of left part and n2 is size of right part
-	n1 = len(left)
-	n2 = len(right)
+	# n1 is size of left part and n2 is size
+	# of right part
+	nL = len(left)
+	nR = len(right)
 	i = j = 0
-	k = low
+	k = l
 
-	while i < n1 and j < n2:
+	# merge left and right in ascending order
+	while i < nL and j < nR:
 		if left[i] <= right[j]:
 			a[k] = left[i]
 			i += 1
@@ -28,60 +35,52 @@ def merge(low, mid, high):
 			j += 1
 		k += 1
 
-	while i < n1:
+	while i < nL:
 		a[k] = left[i]
 		i += 1
 		k += 1
 
-	while j < n2:
+	while j < nR:
 		a[k] = right[j]
 		j += 1
 		k += 1
 
-# merge sort function
-def merge_sort(low, high):
-	if low < high:
+def merge_sort(l, r):
+	if l < r:
 		# calculating mid point of array
-		mid = low + (high - low) // 2
+		mid = l + (r - l) // 2
 
-		merge_sort(low, mid)
-		merge_sort(mid + 1, high)
+		merge_sort(l, mid)
+		merge_sort(mid + 1, r)
 
 		# merging the two halves
-		merge(low, mid, high)
+		merge(l, r)
 
-# thread function for multi-threading
 def merge_sort_threaded():
-	global part
+	part = 0
 	
-	# creating 4 threads
+	# create thread_max thread
 	for i in range(THREAD_MAX):
-		t = threading.Thread(target=merge_sort, args=(part*(MAX//4), (part+1)*(MAX//4)-1))
+		t = threading.Thread(target=merge_sort, args=(part*(MAX//THREAD_MAX), (part+1)*(MAX//THREAD_MAX)-1))
 		part += 1
 		t.start()
 		
-	# joining all 4 threads
+	# join all of thread
 	for i in range(THREAD_MAX):
 		t.join()
 
-	# merging the final 4 parts
-	merge(0, (MAX // 2 - 1) // 2, MAX // 2 - 1)
-	merge(MAX // 2, MAX // 2 + (MAX - 1 - MAX // 2) // 2, MAX - 1)
-	merge(0, (MAX - 1) // 2, MAX - 1)
+	# merge all of part
+	merge(0, MAX // 2 - 1)
+	merge(MAX // 2, MAX - 1)
+	merge(0, MAX - 1)
 
-# Driver Code
 
-# generating random values in array
 for i in range(MAX):
-    a[i] = random.randint(0, 100)
-print(a)
-# t1 and t2 for calculating time for
-# merge sort
+	a[i] = random.randint(0, 10000)
+
 t1 = time.perf_counter()
-
 merge_sort_threaded()
-
 t2 = time.perf_counter()
 
-print("Sorted array:", a)
-print(f"Time taken: {t2 - t1:.6f} seconds")
+print("Array after sort:", a)
+print(f"Time for run merge sort parallel: {t2 - t1:.6f} (s)")
