@@ -5,8 +5,10 @@ import random
 # len of array
 MAX = 100000
 
+# number of threads
 THREAD_MAX = 4
 
+# initialize an array
 a = [0] * MAX
 
 def merge(l, r):
@@ -50,25 +52,25 @@ def merge_sort(l, r):
 def merge_sort_threaded():
 	part = 0
 	
-	# create thread_max thread
+	# create THREAD_MAX threads (THREAD_MAX = 4)
 	for i in range(THREAD_MAX):
 		t = threading.Thread(target=merge_sort, args=(part*(MAX//THREAD_MAX), (part+1)*(MAX//THREAD_MAX)-1))
 		part += 1
 		t.start()
 		
-	# join all of thread
+	# join all of threads
 	for i in range(THREAD_MAX):
 		t.join()
 
-	# merge all of part
+	# merge all of parts
 	merge(0, MAX // 2 - 1)
 	merge(MAX // 2, MAX - 1)
 	merge(0, MAX - 1)
 
-
 for i in range(MAX):
-	a[i] = random.randint(0, 10000)
+	a[i] = random.randint(0, 1e9)
 
+# calculate time
 t1 = time.perf_counter()
 merge_sort_threaded()
 t2 = time.perf_counter()
