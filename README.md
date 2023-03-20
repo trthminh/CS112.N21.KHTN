@@ -24,6 +24,21 @@
 - The `Presentation` folder contains all of the resources that our group used in the presentation.
 ### About `Assignment` folder:
 - Week 1: Merge Sort using Parallel
+- Week 2: Non-Recursive Algorithm Complexity Analysis
+- Week 3: Recursive Algorithm Complexity Analysis
+- Week 4: Check the correctness and performance of the program with the test suite
+- Week 5: Completed Search - Brute Force
+- Week 6: Completed Search - Backtracking
+- Week 7: Completed Search - Branch and Bound
+- Week 8: Divide and Conquer
+- Week 9: Greedy approach
+- Week 10: Dynamic Programming (1)
+- Week 11: Dynamic Programming (2)
+- _**Week 12: Geometric Algorithms 3D**_
+- Week 13: Graph Algorithms
+- Week 14: Algorithm Design practice (1)
+- Week 15: Algorithm Design practice (2)
+- Week 16: Algorithm Design practice (3)
 
 ### About `Presentation` folder:
 - Our group will be presentation about **Geometric 3D algorithms**. So in this repo we will cover some basics related to 3D Geometry.
