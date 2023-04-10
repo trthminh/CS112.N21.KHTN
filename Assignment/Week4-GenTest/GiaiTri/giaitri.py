@@ -1,7 +1,7 @@
 import random
 import os
 def rand(a=1, b=1000):
-    return random.randrange(a, b)
+    return random.randrange(a, b + 1)
 
 def mu(a, b):
     if b == 1:
