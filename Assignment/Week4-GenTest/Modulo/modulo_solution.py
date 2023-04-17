@@ -1,13 +1,17 @@
 import math
 t = int(input())
+# t= 1
 for _ in range(t):
     q, a, b, c = map(int, input().split())
     if q == 1:
         print((a*b) % c)
     else:
-        res = min(b, c) - 1
-        bc = ((b * c) // (math.gcd(b, c)))
-        bc = a // bc
-        res += bc  * min(b, c)
+        if b > c:
+            b, c = c, b
+        x = a // math.lcm(b,c)
+        res = x*b + b - 1
+
+        if a % b == a % c:
+            res = res - (b - 1 - a % b)
 
         print(res)

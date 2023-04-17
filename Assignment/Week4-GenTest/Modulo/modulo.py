@@ -9,10 +9,13 @@ def solve(typeQuery, a, b, c):
     if typeQuery == 1:
         return ((a*b) % c)
     else:
-        res = min(b, c) - 1
-        bc = ((b * c) // (math.gcd(b, c)))
-        bc = a // bc
-        res += bc  * min(b, c)
+        if b > c:
+            b, c = c, b
+        x = a // math.lcm(b,c)
+        res = x*b + b - 1
+
+        if a % b == a % c:
+            res = res - (b - 1 - a % b)
         return res
 
 TestNumber = 100
