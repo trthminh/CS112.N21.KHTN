@@ -6,10 +6,10 @@
 
 # CS112.N21.KHTN - Design and Analysis of Algorithms
 ## Group 6:
-|**Student ID**| **Member**|**Email**|
+|**Student ID**| **Member**|**Role**|**Email**|
 |-----------|-----------|-----------|
-|21520064|Truong Thanh Minh|21520064@gm.uit.edu.vn|
-|21521821|Le Chau Anh|21521821@gm.uit.edu.vn|
+|21520064|Truong Thanh Minh|Leader|21520064@gm.uit.edu.vn|
+|21521821|Le Chau Anh|Member|21521821@gm.uit.edu.vn|
 
 ## Course information:
 - **University**: University of Information Technology - VNUHCM UIT.
