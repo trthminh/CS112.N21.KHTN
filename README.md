@@ -43,6 +43,6 @@
 ### About `Presentation` folder:
 - Our group will be presentation about **Geometric 3D algorithms**. So in this repo we will cover some basics related to 3D Geometry.
 - To more understand, we suggest you should go to this folder to read some document related in this topic that my group present.
-
+- Slide: You can see in: https://www.canva.com/design/DAFiYdLdjOY/Nx6ApUoXL1ucsj02qd0hNQ/view?utm_content=DAFiYdLdjOY&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink
 ## Contact:
 If you have any question, feel free to open issues or contact us at the email address above.
